@@ -1,8 +1,17 @@
+.timer
+{
+    position: relative;
+    float:left;
+    width:240px;
+    margin:20px;
+}
+
 .timer, #newTimer
 {
     position: relative;
     float: left;
     width: 240px;
+    height: 142.7px;
     margin: 20px;
 }
 
