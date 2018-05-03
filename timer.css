@@ -1,26 +1,46 @@
 .timer
 {
-    position: relative;
-    float:left;
-    width:240px;
-    margin:20px;
+    position:   relative;
+    float:      left;
+    width:      240px;
+    margin:     20px;
 }
+
+.tWindow
+{
+    width:  216px;
+    height: 140px;
+}
+
+
+.timer p
+{
+    font-size:      40px;
+    margin-bottom:  25px;
+    margin-top:     0;
+}
+
+
+.timer legend
+{
+    font-weight: bold;
+}
+
+
 
 .timer, #newTimer
 {
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 142.7px;
-    margin: 20px;
+    position:   relative;
+    float:      left;
+    margin:     20px;
 }
 
 .newTimer 
 {
-    height: 138.7px;
-    width: 138.7px;
-    margin: 0;
-    padding: 0;
+    height:     138.7px;
+    width:      138.7px;
+    margin:     0;
+    padding:    0;
 }
 
 .settings
@@ -30,6 +50,32 @@
 
 .tbuttonsTop
 {
+    position:   absolute;
+    margin:     0 0 0 94%;
+    background-color: white;
+    padding: 0;
+    border: 1px solid grey;
     position: absolute;
     margin: 0 0 0 94%;
+    font-weight: bold;
 }
+
+.tButtonsBottom
+{
+    width:      60px;
+    padding:    2px 8px;
+    font-size:  1em;
+    margin:     0 10px 10px 0;
+}
+
+/*                                      remember to touch these ulu 
+.tDelete
+{
+
+}
+
+.tSettings
+{
+
+}
+*/

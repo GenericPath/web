@@ -3,30 +3,35 @@
     <Title>test.exe</Title>
     <meta charset="utf-8" /> 
     <link rel="stylesheet" href="timer.css">
+
+    <!-- just temporary as this is without base.css or anything-->
+    <style>
+        html { font: normal normal normal 1em/1.4 verdana,sans-serif }
+    </style>
 </head>
 
 <body>
     <div id="timer_1" class="timer">
-        <input class="tButtonsTop" value="-" type="button">
-        <input class="tbuttonsTop" value="cfg." type="button">
-        <fieldset class="tFace">
+        <input class="tButtonsTop tDelete" value="-" type="button">
+        <input class="tbuttonsTop tSettings" value="cfg." type="button">
+        <fieldset class="tFace tWindow">
             <legend>30 Sec, Repeat</legend>
             <p>00:30</p>
             <input class="tButtonsBottom" value="Start" type="button">
-            <input class="resetTimer" value="Reset" type="button">
+            <input class="tButtonsBottom" value="Reset" type="button">
         </fieldset>
         <fieldset class="tSettings" hidden="">
-            <!--fill me in-->
+            <!--filled in below-->
         </fieldset>
     </div>
 
     <div id="timer_1" class="timer">
-        <input class="tButtonsTop" value="-" type="button">
-        <input class="tbuttonsTop" value="cfg." type="button">
+        <input class="tButtonsTop tDelete" value="-" type="button">
+        <input class="tbuttonsTop tSettings" value="cfg." type="button">
         <fieldset class="tFace" hidden="">
             <!--filled in above-->
         </fieldset>
-        <fieldset class="tSettings">
+        <fieldset class="tSettings tWindow"> <!-- dont forget to add hidden when adding back to above-->
             <legend>Settings</legend>
             
         </fieldset>
