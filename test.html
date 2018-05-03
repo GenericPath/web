@@ -4,7 +4,8 @@
     <meta charset="utf-8" /> 
     <link rel="stylesheet" href="timer.css">
 
-    <!-- just temporary as this is without base.css or anything-->
+    <!-- test.css basically lul-->
+    <!-- possibly create this as apart of timer.css .... -->
     <style>
         html { font: normal normal normal 1em/1.4 verdana,sans-serif }
     </style>
@@ -12,23 +13,23 @@
 
 <body>
     <div id="timer_1" class="timer">
-        <input class="tButtonsTop tDelete" value="-" type="button">
-        <input class="tbuttonsTop tSettings" value="cfg." type="button">
+        <input class="tButtonsTop tDeleteButton" value="-" type="button">
+        <input class="tButtonsTop tSettingButton" value="cfg." type="button">
         <fieldset class="tFace tWindow">
             <legend>30 Sec, Repeat</legend>
             <p>00:30</p>
             <input class="tButtonsBottom" value="Start" type="button">
             <input class="tButtonsBottom" value="Reset" type="button">
         </fieldset>
-        <fieldset class="tSettings" hidden="">
+        <fieldset class="tSettings tWindow" hidden="">
             <!--filled in below-->
         </fieldset>
     </div>
 
-    <div id="timer_1" class="timer">
-        <input class="tButtonsTop tDelete" value="-" type="button">
-        <input class="tbuttonsTop tSettings" value="cfg." type="button">
-        <fieldset class="tFace" hidden="">
+    <div id="timer_2" class="timer">
+        <input class="tButtonsTop tDeleteButton" value="-" type="button">
+        <input class="tButtonsTop tSettingButton" value="cfg." type="button">
+        <fieldset class="tFace tWindow" hidden="">
             <!--filled in above-->
         </fieldset>
         <fieldset class="tSettings tWindow"> <!-- dont forget to add hidden when adding back to above-->
@@ -37,10 +38,13 @@
         </fieldset>
     </div>
 
+    <!-- why is this a form it can be changed to a div -->
     <form id="newTimer" action="javascript:void(0);">
         <fieldset class="newTimer">
             <input class="newTimer" type="image" alt="" src="img/timer/p.png">
         </fieldset>
     </form>
     <!--<script type="text/javascript" src="timer.js"></script>-->
+
+    <script type="text/javascript" src="devReload.js"></script>
 </body>

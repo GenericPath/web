@@ -6,10 +6,50 @@
     margin:     20px;
 }
 
+.tButtonsTop
+{
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    border: 1px solid grey;
+    position: absolute;
+    font-weight: bold;
+    /* these ones are replaced in .tSettingButton */
+    width: 20px;
+    margin: 0 0 0 95%;
+}
+
+.tSettingButton
+{
+    width:          40px;
+    margin-left:    72%;
+}
+
+.tDeleteButton /* currently not being used */
+{
+
+}
+
+.tButtonsBottom
+{
+    width:      60px;
+    padding:    2px 8px;
+    font-size:  1em;
+    margin:     0 10px 10px 0;
+}
+
+/* currently no classes for either tButtonBottom */
+
 .tWindow
 {
     width:  216px;
     height: 140px;
+    padding: 10px 10px 0 10px;
+}
+
+.tSettings
+{
+    overflow-y: auto;
 }
 
 
@@ -25,8 +65,6 @@
 {
     font-weight: bold;
 }
-
-
 
 .timer, #newTimer
 {
@@ -47,35 +85,3 @@
 {
     overflow-y: auto;
 }
-
-.tbuttonsTop
-{
-    position:   absolute;
-    margin:     0 0 0 94%;
-    background-color: white;
-    padding: 0;
-    border: 1px solid grey;
-    position: absolute;
-    margin: 0 0 0 94%;
-    font-weight: bold;
-}
-
-.tButtonsBottom
-{
-    width:      60px;
-    padding:    2px 8px;
-    font-size:  1em;
-    margin:     0 10px 10px 0;
-}
-
-/*                                      remember to touch these ulu 
-.tDelete
-{
-
-}
-
-.tSettings
-{
-
-}
-*/
