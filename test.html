@@ -35,6 +35,26 @@
         <fieldset class="tSettings tWindow"> <!-- dont forget to add hidden when adding back to above-->
             <legend>Settings</legend>
             
+            <div class="tSettingField">
+                <p>Time</p>
+                <input type="text" default="00:00:30" placeholder="hh:mm:ss" title="Time">
+            </div>
+            <div class="tSettingField">
+                    <p>Name</p>
+                    <input type="checkbox" default="True" placeholder="Name" title="Name">
+                </div>
+            <div class="tSettingField">
+                <p>Volume</p>
+                <input type="range" min = "1" default="50" max="100" title="Volume">
+            </div>
+            <div class="tSettingField">
+                <p>Audio File</p>
+                <input type="file" default="/big.mp3" placeholder="big.mp3" title="File">
+            </div>
+            <div class="tSettingField">
+                <p>Audio Test</p>
+                <input type="image" src="img/timer/audioTest.png" title="Test Audio">
+            </div>
         </fieldset>
     </div>
 
@@ -46,5 +66,50 @@
     </form>
     <!--<script type="text/javascript" src="timer.js"></script>-->
 
-    <script type="text/javascript" src="devReload.js"></script>
+    <!--<script type="text/javascript" src="devReload.js"></script>-->
+
+    <!-- ########################## -->
+    <!--           TESTING          -->
+    <!-- ########################## -->
+    <select>
+        <option value="big.mp3">big.mp3</option>
+        <option id="customFile" value="custom">choose file</option>
+    </select>
+    <input id = "_file" type="file" hidden="" accept="audio/*">
+    <!-- onchange="handleFiles(this.files)" -->
+    <!-- use inputElement.addEventListener("change", handleFiles, false); instead of onchange potentially -->
+    <!-- can do accept with .gif,.png,video/* etc etc--> <!-- https://www.w3schools.com/tags/att_input_accept.asp -->
+    
+    <script type="text/javascript">
+        var customFile = document.getElementById("customFile")
+        var fileInput = document.getElementById('_file')
+        customFile.onclick = function() {fileInput.click();}
+        var audio
+        
+        fileInput.addEventListener("change", handleFile, false)
+
+        function handleFile(file)
+        {
+
+        }
+        /*
+        function handleFiles(files)
+        {
+            //can use <input multiple> to allow multiple and then handle multiple with list index..
+            // however currently will only accept one for convenience sake.
+            if (!files.Length)
+            {
+                console.log("no files selected")
+            }
+            else
+            {
+                audio = files[0]
+                var audioName = audio.value
+                console.log("audioName")
+                customFile.innerHTML = audioName.split(/(\\|\/)/g).pop()
+                console.log(customFile.innerHTML)
+            }
+        }
+        */
+    </script>
 </body>

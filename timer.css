@@ -1,9 +1,6 @@
 .timer
 {
-    position:   relative;
-    float:      left;
     width:      240px;
-    margin:     20px;
 }
 
 .tButtonsTop
@@ -27,7 +24,34 @@
 
 .tDeleteButton /* currently not being used */
 {
+    
+}
 
+.timer p
+{
+    font-size:      40px;
+    margin-bottom:  25px;
+    margin-top:     0;
+}
+
+.tSettingField
+{
+    height: 15px;
+    padding-bottom: 10px;
+}
+
+.tSettingField p
+{
+    float:left;
+    font-size: 1em;
+    margin: 0 0 0 0;
+}
+
+.tSettingField input
+{
+    float:right;
+    width: 50%;
+    padding-top: 0;
 }
 
 .tButtonsBottom
@@ -52,15 +76,6 @@
     overflow-y: auto;
 }
 
-
-.timer p
-{
-    font-size:      40px;
-    margin-bottom:  25px;
-    margin-top:     0;
-}
-
-
 .timer legend
 {
     font-weight: bold;
@@ -84,4 +99,16 @@
 .settings
 {
     overflow-y: auto;
+}
+
+.tSettings input[type="range"] 
+{
+    margin: 0px;
+}
+
+.tSettings input[type="image"]
+{
+    height: 22px;
+    width: 22px;
+    padding-right: 40%;
 }
