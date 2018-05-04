@@ -8,6 +8,12 @@
     <!-- possibly create this as apart of timer.css .... -->
     <style>
         html { font: normal normal normal 1em/1.4 verdana,sans-serif }
+
+        .custom
+        {
+            font-weight:bold;
+            font-style: italic;
+        }
     </style>
 </head>
 
@@ -71,45 +77,44 @@
     <!-- ########################## -->
     <!--           TESTING          -->
     <!-- ########################## -->
-    <select>
+    <select id="fileDropdown">
         <option value="big.mp3">big.mp3</option>
-        <option id="customFile" value="custom">choose file</option>
+        <option id="fileSelect" value="custom">
+            <span class="custom">choose file</span>
+        </option>
     </select>
-    <input id = "_file" type="file" hidden="" accept="audio/*">
-    <!-- onchange="handleFiles(this.files)" -->
+    <input id = "fileElem" type="file" hidden="" accept="audio/*">
     <!-- use inputElement.addEventListener("change", handleFiles, false); instead of onchange potentially -->
     <!-- can do accept with .gif,.png,video/* etc etc--> <!-- https://www.w3schools.com/tags/att_input_accept.asp -->
     
     <script type="text/javascript">
-        var customFile = document.getElementById("customFile")
-        var fileInput = document.getElementById('_file')
-        customFile.onclick = function() {fileInput.click();}
-        var audio
-        
-        fileInput.addEventListener("change", handleFile, false)
+        var fileSelect = document.getElementById("fileSelect"),
+            fileElem = document.getElementById("fileElem"),
+            fileDropdown = document.getElementById("fileDropdown")
 
-        function handleFile(file)
-        {
 
-        }
-        /*
-        function handleFiles(files)
+        fileSelect.addEventListener("click", function (e) 
         {
-            //can use <input multiple> to allow multiple and then handle multiple with list index..
-            // however currently will only accept one for convenience sake.
-            if (!files.Length)
+            fileElem.click();
+        }, false);
+
+        fileElem.addEventListener("change", handleFiles, false)
+
+        function handleFiles()
+        {
+            console.log(fileSelect.value)
+            var files = this.files;
+
+            for (var i = 0; i < files.length; i++)
             {
-                console.log("no files selected")
-            }
-            else
-            {
-                audio = files[0]
-                var audioName = audio.value
-                console.log("audioName")
-                customFile.innerHTML = audioName.split(/(\\|\/)/g).pop()
-                console.log(customFile.innerHTML)
+                console.log("Filename " + files[i].name);
+                var newOption = document.createElement("option")
+                newOption.innerHTML = "<span class='custom'>" + files[i].name + "</span>"
+                newOption.className = files[i].name
+                newOption.value = files[i].name
+                fileDropdown.insertBefore(newOption, fileSelect)
+                fileDropdown.value = newOption.value
             }
         }
-        */
     </script>
 </body>
