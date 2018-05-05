@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$	[OR]
+RewriteCond %{REMOTE_ADDR} !^127.0.0.1
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,QSA]
+	
+#Redirects domain.com/file.html to domain.com/file						
+RewriteCond %{REQUEST_FILENAME} !-d        	# is not directory
+RewriteCond %{REQUEST_FILENAME}\.html -f   	# is an existing html file
+RewriteCond %{REQUEST_URI} ^(.+)\.html$    	# request URI ends with .html
+RewriteRule (.*)\.html$ /$1 [R=301,L]      	# redirect from index.html to index
