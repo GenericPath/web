@@ -69,12 +69,15 @@
     <!-- why is this a form it can be changed to a div -->
     <form id="newTimer" action="javascript:void(0);">
         <fieldset class="newTimer">
-            <input class="newTimer" type="image" alt="" src="img/timer/p.png">
+            <input class="newTimer" type="image" alt="" src="../img/timer/p.png">
         </fieldset>
     </form>
     <!--<script type="text/javascript" src="timer.js"></script>-->
-
     <!--<script type="text/javascript" src="devReload.js"></script>-->
+
+
+
+
 
     <!-- ########################## -->
     <!--           TESTING          -->
@@ -121,7 +124,7 @@
             reader.onload = function(e)
             {
                 //console.log(e.target.result)
-                    //  newOption.value = e.target.result           change it so it adds to list and every cfg pulls from the list..
+                newOption.value = e.target.result           //change it so it adds to list and every cfg pulls from the list..
                 fileAudio.setAttribute('src', e.target.result)
                 fileAudio.play()
             }
